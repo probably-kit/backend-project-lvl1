@@ -1,0 +1,15 @@
+name: Makefile CI
+
+lint:
+	npx eslint .
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: linter
+      run: make lint
