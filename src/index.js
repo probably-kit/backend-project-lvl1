@@ -4,6 +4,7 @@ import {BrainCalc} from '../bin/brain-calc.js';
 import {BrainEven} from '../bin/brain-even.js';
 import {BrainGCD} from '../bin/brain-gcd.js';
 import { BrainProgression } from '../bin/brain-progression.js';
+import { BrainPrime } from '../bin/brain-prime.js';
 
 export const getRandom = (min, max) => {
         
@@ -16,7 +17,7 @@ export const getRandom = (min, max) => {
 console.log('Welcome to the Brain Games!');
 const name = cli();
 
-const games = ['Brain-Even','Brain-Calc','Brain-GCD','Brain-Progression'];
+const games = ['Brain-Even','Brain-Calc','Brain-GCD','Brain-Progression','Brain-Prime'];
 
 let CurrentGame = true;
 
@@ -46,6 +47,10 @@ for(const game of games){
         console.log('What number is missing in the progression?');
         break;
 
+        case 'Brain-Prime': 
+        console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+        break;
+
         default: console.log(':('); break;
     }
 
@@ -67,6 +72,10 @@ for(const game of games){
 
             case 'Brain-Progression': 
             CurrentGame = BrainProgression();
+            break;
+
+            case 'Brain-Prime': 
+            CurrentGame = BrainPrime();               
             break;
 
             default: console.log(':('); break;
