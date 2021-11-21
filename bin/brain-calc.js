@@ -2,15 +2,15 @@ import readlineSync from 'readline-sync';
 import {getRandom} from '../src/index.js';
 
 const getRandomMathAction = () =>{
-    const value = getRandom();
+    const value = getRandom(1,100);
     if(value <= 33) return '+';
     else if (value > 33 & value <= 66) return '-';
     else if (value > 66) return '*';
 }
 
 export const BrainCalc = () =>{
-    const FirstNumber = getRandom();
-    const SecondNumber = getRandom();
+    const FirstNumber = getRandom(1,100);
+    const SecondNumber = getRandom(1,100);
     const MathAction = getRandomMathAction();
     let CorrectAnswer;
     console.log('Question:', FirstNumber, MathAction,SecondNumber );

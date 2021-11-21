@@ -3,16 +3,20 @@ import cli from './cli.js';
 import {BrainCalc} from '../bin/brain-calc.js';
 import {BrainEven} from '../bin/brain-even.js';
 import {BrainGCD} from '../bin/brain-gcd.js';
+import { BrainProgression } from '../bin/brain-progression.js';
 
-export const getRandom = () => {
-    const result = Math.round(Math.random() * 100);
-    return result;
+export const getRandom = (min, max) => {
+        
+        let rand = min + Math.random() * (max + 1 - min);
+        return Math.floor(rand);
+      
+      
 }
 
 console.log('Welcome to the Brain Games!');
 const name = cli();
 
-const games = ['Brain-Even','Brain-Calc','Brain-GCD'];
+const games = ['Brain-Even','Brain-Calc','Brain-GCD','Brain-Progression'];
 
 let CurrentGame = true;
 
@@ -21,7 +25,6 @@ for(const game of games){
     let counter = 0; 
 
     if(CurrentGame === false){
-        console.log("Let's try again, " + name + "!");
         break;
     }
 
@@ -38,6 +41,11 @@ for(const game of games){
         case 'Brain-GCD': 
         console.log('Find the greatest common divisor of given numbers');
         break;
+
+        case 'Brain-Progression': 
+        console.log('What number is missing in the progression?');
+        break;
+
         default: console.log(':('); break;
     }
 
@@ -56,6 +64,11 @@ for(const game of games){
             case 'Brain-GCD': 
             CurrentGame = BrainGCD();
             break;
+
+            case 'Brain-Progression': 
+            CurrentGame = BrainProgression();
+            break;
+
             default: console.log(':('); break;
         }
     
@@ -63,6 +76,7 @@ for(const game of games){
             console.log('Correct!');
         }
         else { 
+            console.log("Let's try again, " + name + "!");
             break;
         }
 

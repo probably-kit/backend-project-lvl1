@@ -27,8 +27,8 @@ const getGCD = (FirstNumber, SecondNumber) => {
 
 
 export const BrainGCD = () =>{
-    const FirstNumber = getRandom();
-    const SecondNumber = getRandom();
+    const FirstNumber = getRandom(1,100);
+    const SecondNumber = getRandom(1,100);
     const CorrectAnswer = getGCD(FirstNumber, SecondNumber );  
     const Answer = readlineSync.question('Question: ' + FirstNumber +' & '+ SecondNumber + '\n' );
     if(CorrectAnswer === Number(Answer)){

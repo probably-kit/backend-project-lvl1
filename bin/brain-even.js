@@ -13,7 +13,7 @@ const IsEven = (number) =>{
 
 
 export const BrainEven= () => {
-    const number = getRandom();
+    const number = getRandom(1,100);
     console.log('Question:', number );
     const answer = readlineSync.question('Print your answer \n');
     if(IsEven(number) === true){
