@@ -1,4 +1,4 @@
-https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability!":https://codeclimate.com/github/codeclimate/codeclimate/maintainability
+code climat : [![Maintainability](https://api.codeclimate.com/v1/badges/f4f8972335adf798d07e/maintainability)](https://codeclimate.com/github/probably-kit/backend-project-lvl1/maintainability)
 
 brain even: https://asciinema.org/a/451438
 ![alt text](screenshots/brain-even.jpg "Asciinema from brain even")​
