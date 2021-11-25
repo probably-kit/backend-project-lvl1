@@ -11,38 +11,43 @@ const IsEven = (number) =>{
 
 
 
+// //if(CorrectAnswer === Answer){
+//     return true;
+// }
+// else {
+//     console.log("'" + Answer + "'" + "is wrong answer :( Correct answer was '" + CorrectAnswer + "'" ); 
+//     return false;
+    
+// }
+
+// if(IsEven(number)){
+//     CorrectAnswer = 'yes';
+// }
+// else{
+//     CorrectAnswer = 'no';
+// }
 
 export const BrainEven= () => {
     const number = getRandom(1,100);
     console.log('Question:', number );
-    const answer = readlineSync.question('Print your answer \n');
-    if(IsEven(number) === true){
-        if( answer === 'yes') {
-            return true;
-        }
-        else if(answer === 'no') {
-            console.log('\'no\' is wrong answer ;(. Correct answer was \'yes\'');
-            return false;
-        }
-        else {
-            console.log('You can only write \'yes\' or \'no\'');
-            return false;
-        }
-        
+    const Answer = readlineSync.question('Print your answer \n');
+
+    let CorrectAnswer;
+    if(IsEven(number)){
+        CorrectAnswer = 'yes';
     }
     else{
-        
-        if( answer === 'no') {
-            return true;
-        }
-        else if(answer === 'yes'){ 
-            console.log('\'yes\' is wrong answer ;(. Correct answer was \'no\'');
-            return false;
-         }
-         else {
-            console.log('You can only write \'yes\' or \'no\'');
-            return false;
-        }      
+        CorrectAnswer = 'no';
+    }
+
+    
+    if(CorrectAnswer === Answer){
+        return true;
+    }
+    else {
+        console.log("'" + Answer + "'" + "is wrong answer :( Correct answer was '" + CorrectAnswer + "'" ); 
+        return false;
+    
     }
 
 }
