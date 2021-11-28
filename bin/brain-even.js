@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import {getRandom} from '../src/index.js';
 
@@ -11,21 +12,7 @@ const IsEven = (number) =>{
 
 
 
-// //if(CorrectAnswer === Answer){
-//     return true;
-// }
-// else {
-//     console.log("'" + Answer + "'" + "is wrong answer :( Correct answer was '" + CorrectAnswer + "'" ); 
-//     return false;
-    
-// }
 
-// if(IsEven(number)){
-//     CorrectAnswer = 'yes';
-// }
-// else{
-//     CorrectAnswer = 'no';
-// }
 
 export const BrainEven= () => {
     const number = getRandom(1,100);
