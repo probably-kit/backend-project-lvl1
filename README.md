@@ -10,7 +10,7 @@ brain calc: https://asciinema.org/a/451441
 ![alt text](screenshots/brain-calc.jpg "Asciinema from brain calc")​
 
 brain gcd: https://asciinema.org/a/rdlHvqqusUj58CNf2Dk9MZYMy
-![alt text](screenshots/brain-gcd.jpg "Asciinema from brain gcd")​
+![alt text](screenshots/brain-gdc.jpg "Asciinema from brain gcd")​
 
 brain progression: https://asciinema.org/a/2GmuSYkuhuM1FWS2Nz89XRZQ9
 ![alt text](screenshots/brain-progression.jpg "Asciinema from brain progression")​
